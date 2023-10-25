@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        /* .mySpan{
+            color: red;
+        }
+
+        .mySpan{
+            color: #2e2e2e;
+        } */
+        /* #spanTest{
+            color: green;
+        }
+        .mySpan{
+            color: aqua;
+        }
+        span{
+            font-size: 18px;
+        } */
+        /*body{
+            color: blue;
+        } */
+
+        .special{
+            color: darkred;
+            font-size: 18px;
+        }
+
+        .main{
+            color: blue;
+        }
+
+        .innerSpan{
+            color: red;
+        }
+
+        .innerSpan2{
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
-    
+    <!--Selectors-->
+    <!-- 1. Селектор по классу (атрибут class)
+    2. Селектор по тегу (сам <span></span>)
+    3. Селектор по id  -->
+
+    <!--Priority of selectors-->
+    <!-- - Наивысший приоритет - inline стили
+    - Еще более высокий приоритет - id 
+    - Более высокий приоритет - класс
+    - Самый низкий приоритет  - тег или элемент -->
+
+
+    <div> <!--Parent-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis distinctio officiis inventore reprehenderit explicabo laboriosam vitae ex? Magnam, officia eos.</p> <!--Child-->
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, architecto!</p>
+        <span class="mySpan" id="spanTest" style="color: orangered;">And Again</span> <!--Child-->
+        <ul class="special"><!--Ненумерованный список-->
+            <li>Один</li>
+            <li>Два</li>
+            <li>Три</li>
+        </ul>
+
+        <ol><!--Нумерованный список-->
+            <li>Один</li>
+            <li>Два</li>
+            <li>Три</li>
+        </ol>
+    </div>
+        <div class="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <span class="innerSpan">Lorem ipsum dolor sit amet.</span>
+            <span class="innerSpan2">Lorem, ipsum dolor.</span>
+        </div>
 </body>
 </html>
